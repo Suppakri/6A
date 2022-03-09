@@ -78,7 +78,14 @@
 					return;
 			   }
 			   
-			   
+			   $(document).ready(function(){
+			$("button").click(function(){
+			   var t = $('#temp').val();//celsius
+			   var u = $('#unit').val();
+
+			   if(validate(t) == 0) return;
+
+			   var result = calculate(t,u);
 			   
 			   alert("Temperature is "+t1+" in "+u1);
 			});
